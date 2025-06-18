@@ -1,0 +1,28 @@
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore environment config
+.env
+
+# VS Code and IDE settings
+.vscode/
+.idea/
+
+# Ignore local embeddings and vector DB
+app/embeddings/
+
+# Ignore local PDFs and raw data (optional, if you don't want to upload them)
+app/data/
+
+# Mac/Windows system files
+.DS_Store
+Thumbs.db
+
+# Streamlit generated
+*.streamlit/
+
+# Logs or temp
+*.log

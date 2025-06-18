@@ -1,0 +1,29 @@
+streamlit
+requests
+
+# LangChain and ecosystem
+langchain
+langchain-community
+
+# Vector store
+faiss-cpu
+
+# Document processing
+pypdf
+
+# Embeddings model
+sentence-transformers
+
+# PDF loader (requires PyMuPDF for more advanced support; optional but recommended)
+PyMuPDF
+
+# Local LLM inference (Ollama API server)
+ollama
+
+
+openai
+langchain-huggingface
+
+transformers
+sentence-transformers
+
