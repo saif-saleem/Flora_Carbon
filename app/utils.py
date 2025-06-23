@@ -1,11 +1,15 @@
 from langchain_community.vectorstores import FAISS
-from langchain_community.embeddings import OllamaEmbeddings
+from langchain.embeddings import OpenAIEmbeddings
 from langchain.prompts import PromptTemplate
 from collections import Counter
 import re
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 EMBEDDING_DIR = "app/embeddings"
-embedding_model = OllamaEmbeddings(model="nomic-embed-text")
+embedding_model = OpenAIEmbeddings(openai_api_key=os.getenv("OPENAI_API_KEY"))
 
 db = FAISS.load_local(
     EMBEDDING_DIR,

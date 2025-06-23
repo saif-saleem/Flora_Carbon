@@ -21,9 +21,10 @@ PyMuPDF
 ollama
 
 
+langchain-core
 openai
-langchain-huggingface
 
-transformers
-sentence-transformers
+
+bs4
+python-dotenv
 

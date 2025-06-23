@@ -1,28 +1,26 @@
-# Ignore Python cache files
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-
-# Ignore environment config
-.env
-
-# VS Code and IDE settings
-.vscode/
-.idea/
-
-# Ignore local embeddings and vector DB
-app/embeddings/
-
-# Ignore local PDFs and raw data (optional, if you don't want to upload them)
+# Ignore data PDFs
 app/data/
 
-# Mac/Windows system files
+# Ignore FAISS index and Pickle files
+app/embeddings/index.faiss
+app/embeddings/index.pkl
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore environment variables
+.env
+
+# Ignore virtual environments
+venv/
+*.venv/
+.env/
+.envrc/
+
+# Ignore Jupyter/IPython checkpoints (if using notebooks later)
+.ipynb_checkpoints/
+
+# Ignore macOS / Windows metadata files
 .DS_Store
 Thumbs.db
-
-# Streamlit generated
-*.streamlit/
-
-# Logs or temp
-*.log
