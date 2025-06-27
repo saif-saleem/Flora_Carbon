@@ -67,6 +67,8 @@ def retrieve_context(query: str, k: int = 40):
 def build_prompt(query, context, quoted_sentences):
     quoted_section = "\n\n".join(
         f"- From `{qs['source']}`, Clause `{qs['clause']}`: \"{qs['snippet']}\""
+        if qs['clause'].lower() != "unknown" else
+        f"- From `{qs['source']}`: \"{qs['snippet']}\""
         for qs in quoted_sentences
     )
 
@@ -90,7 +92,8 @@ QUOTED SENTENCES:
 QUESTION:
 {question}
 
-ANSWER (Direct + Detailed + Quoted):'''
+(Respond in well-formatted markdown text with clarity)
+'''
 
     prompt = PromptTemplate(
         input_variables=["context", "quoted_section", "question"],
